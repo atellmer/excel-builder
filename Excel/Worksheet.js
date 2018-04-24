@@ -1,10 +1,14 @@
+import _ from 'underscore';
+import util from './util';
+import { RelationshipManager } from './RelationshipManager';
+
+
 /**
  * This module represents an excel worksheet in its basic form - no tables, charts, etc. Its purpose is 
  * to hold data, the data's link to how it should be styled, and any links to other outside resources.
  * 
  * @module Excel/Worksheet
  */
-define(['underscore', './util', './RelationshipManager'], function (_, util, RelationshipManager) {
     "use strict";
     /**
      * @constructor
@@ -520,5 +524,9 @@ define(['underscore', './util', './RelationshipManager'], function (_, util, Rel
             this.columnFormats = columnFormats;
         }
     });
-    return Worksheet;
-});
+
+
+export {
+	Worksheet
+}		
+
